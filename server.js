@@ -6,15 +6,18 @@ var app = express();
 app.use(morgan('combined'));
 
 app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+    res.sendFile(path.join(_dirname, 'ui', 'index.html'));
 });
-app.get('article1'), function (req, res){
-    res.sendfile(path.join(_dirname, 'ui', 'index.html'));
-}
-app.get('article2'), function (req, res)
+
+app.get('/article1', function (req, res){
     res.sendfile(path.join(_dirname, 'ui', 'index.html'));
 });
-app.get('article3'), function (req, res)
+
+app.get('/article2', function (req, res){
+    res.sendfile(path.join(_dirname, 'ui', 'index.html'));
+});
+
+app.get('/article3', function (req, res){
     res.sendfile(path.join(_dirname, 'ui', 'index.html'));
 });
 
